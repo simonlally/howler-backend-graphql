@@ -1,5 +1,9 @@
 const { ApolloServer } = require("apollo-server");
 const gql = require("graphql-tag");
+const mongoose = require("mongoose");
+
+const Post = require("./models/Post");
+const { MONGODB } = require("./config.js");
 
 const typeDefs = gql`
   type Query {
@@ -18,10 +22,15 @@ const server = new ApolloServer({
   resolvers
 });
 
-server
-  .listen({
-    port: 5000
+mongoose
+  .connect(MONGODB, { useNewUrlParser: true })
+  .then(() => {
+    console.log("Connected!");
+    return server.listen({ port: 5000 });
   })
   .then(res => {
-    console.log(`Server running at ${res.url}`);
+    console.log(`Server running on ${res.url}`);
+  })
+  .catch(err => {
+    console.log(err);
   });
