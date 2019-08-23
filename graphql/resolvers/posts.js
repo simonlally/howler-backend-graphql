@@ -31,7 +31,7 @@ module.exports = {
     async createPost(_, { body }, context) {
       const user = validateAuth(context);
 
-      if (arguments.body.trim() === "") {
+      if (body.trim() === "") {
         throw new Error("post cannot be empty");
       }
 
