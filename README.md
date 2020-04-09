@@ -1,7 +1,7 @@
 # Howler
 
 ### About
-Howler backend services were built with [Node](https://github.com/nodejs/node), [GraphQL](https://github.com/graphql/graphql-js), [Mongoose](https://github.com/Automattic/mongoose) and uses [MongoDB](https://github.com/mongodb/mongo) as a NoSQL database.  
+Howler backend services were built with [Node](https://github.com/nodejs/node), [Apollo Server](https://github.com/apollographql/apollo-server) [GraphQL](https://github.com/graphql/graphql-js), [Mongoose](https://github.com/Automattic/mongoose) and uses [MongoDB](https://github.com/mongodb/mongo) as database.  
 [Check out this project using GraphQL's Playground](https://howler-backend.herokuapp.com/) Please be patient as Heroku may take a few minutes to initially load.
 [Check out the repo for the frontend](https://github.com/simonlally/howler) or [try the fully deployed version here](https://howler-react.herokuapp.com/).
 
